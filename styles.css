@@ -3,7 +3,7 @@
 
 /* general styling */
 body {
-    background-color: hsl(210, 46%, 95%);;
+    background-color: hsl(210, 46%, 95%);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -69,11 +69,12 @@ main > section:first-child {
     /* background-image: url('data:image/svg+xml;utf8,<svg width="104" height="102" xmlns="http://www.w3.org/2000/svg"><path d="M104 102V59.727H84.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C95.01 25.86 98.909 22.257 104 19.375V0c-9.758 4.27-17.712 9.874-23.864 16.813-6.151 6.939-10.712 14.545-13.681 22.818C63.485 47.904 62 59.941 62 75.74V102h42zm-62 0V59.727H22.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C33.01 25.86 36.909 22.257 42 19.375V0c-9.652 4.27-17.58 9.874-23.784 16.813C12.01 23.752 7.424 31.358 4.455 39.631 1.485 47.904 0 59.941 0 75.74V102h42z" fill="#A775F1" fill-rule="nonzero"/></svg>'); */
     background-image: url(images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-x: 85%;
     /* fill-rule: nonzero; */
     background-size: 104px 102px;
     color: #A775F1;
     background-color: hsl(263, 55%, 52%);
+    grid-area: sec1;
 }
 
 /* ===== second testimonial ===== */
@@ -83,7 +84,7 @@ main > section:nth-child(2) {
     /* background-color: hsl(210, 46%, 95%);
     background-color: hsl(0, 0%, 81%);
     background-color: hsl(219, 29%, 14%); */
-
+    grid-area: sec2;
 }
 
 main > section:nth-child(2) > img {
@@ -94,7 +95,7 @@ main > section:nth-child(2) > img {
 /* ===== third testimonial=====  */
 main > section:nth-child(3) {
     background-color: #fff;
-
+    grid-area: sec3;
 }
 
 main > section:nth-child(3) > img {
@@ -108,7 +109,7 @@ main > section:nth-child(3) > .graduate > h2, main > section:nth-child(3) > .gra
 /* ===== fourth testimonial ===== */
 main > section:nth-child(4) {
     background-color: hsl(219, 29%, 14%);
-
+    grid-area: sec4;
 }
 
 main > section:nth-child(4) > img {
@@ -116,9 +117,9 @@ main > section:nth-child(4) > img {
 }
 
 /* ===== fifth testimonial ===== */
-main > section:last-child >{
+main > section:last-child {
     background-color: #fff;
-    
+    grid-area: sec5;
 }
 
 main > section:last-child > img {
@@ -138,3 +139,38 @@ main > section:last-child > .graduate > h2, main > section:last-child > .graduat
     grid-template-rows: repeat(2, 20px);
     grid-template-areas: "graduate-h1" "graduate-h2";
 }
+
+/* ===== media query for desktop ===== */
+
+@media (min-width: 1440px){
+    body {
+        background-color: hsl(210, 46%, 95%);
+    }
+    
+    main {
+        display: grid;
+        row-gap: 40px;
+        column-gap: 40px;
+        grid-template-columns: repeat(3, auto) 280px;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "sec1 sec1 sec2 sec5"
+        "sec3 sec4 sec4 sec5" ;
+    }
+    
+    section {
+        margin-top: 0;
+    }
+    
+}
+
+/* ===== attribution styling ===== */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
