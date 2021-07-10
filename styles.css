@@ -160,6 +160,8 @@ main > section:last-child > .graduate > h2, main > section:last-child > .graduat
     
     section {
         margin-top: 0;
+        -webkit-box-shadow: 5px 5px 15px -4px rgba(0,0,0,0.7); 
+box-shadow: 5px 5px 15px -4px rgba(0,0,0,0.7);
     }
     
 }
